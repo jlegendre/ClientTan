@@ -35,17 +35,6 @@ namespace TanClient.Controllers
                 dto = JsonConvert.DeserializeObject<List<ArretDTO>>(result);
 
             }
-            ArretDTO arret = new ArretDTO();
-            LigneDTO ligne = new LigneDTO();
-            LigneDTO ligne2 = new LigneDTO();
-            arret.CodeLieu = "OTAG";
-            arret.Libelle = "50 Otages";
-
-            ligne.NumLigne = "2";
-            ligne2.NumLigne = "C2";
-            arret.Ligne.Add(ligne);
-            arret.Ligne.Add(ligne2);
-            dto.Add(arret);
 
             //returning the employee list to view    
             return View(dto);
